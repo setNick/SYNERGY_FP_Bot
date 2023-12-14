@@ -2,8 +2,7 @@ from aiogram import types
 kb = [
     [types.KeyboardButton(text="📆Расписание")],
     # [types.KeyboardButton(text="👕Мерч")],
-    [types.KeyboardButton(text="Создатели бота"),
-    types.KeyboardButton(text="ℹ️Информация")]
+    [types.KeyboardButton(text="ℹ️Информация")],
     ]
 
 keyboard = types.ReplyKeyboardMarkup(
