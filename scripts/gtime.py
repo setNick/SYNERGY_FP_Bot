@@ -1,14 +1,15 @@
 import datetime
 
+now = datetime.datetime.now()      # текущие дата и время
+y = now.year
+m = now.month
+d = now.day
+h = now.hour
+mi = now.minute
+s = now.second
+ms = now.microsecond
+
 def get_day() -> str:
-    now = datetime.datetime.now()      # текущие дата и время
-    y = now.year
-    m = now.month
-    d = now.day
-    h = now.hour
-    mi = now.minute
-    s = now.second
-    ms = now.microsecond
     datetime.datetime(y, m, d, h, mi, s, ms)
     return datetime.datetime.isoweekday(now)
     # if language == 'ru':
