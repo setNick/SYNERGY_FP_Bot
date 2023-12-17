@@ -26,7 +26,7 @@ CREATORS = "{<} Студенты Фокультета программирова
 # logging.basicConfig(level=logging.INFO)
 
 logging.basicConfig(level=logging.INFO, filename='data/logs/my_logging.log', format='%(levelname)s (%(asctime)s): %(message)s (Line: %(lineno)d) [%(filename)s]', datefmt='%d/%m/%Y %I:%M:%S',
-                    encoding = 'utf-8', filemode='a')
+                    encoding = 'utf-8', filemode='w')
 # Объект бота
 bot = Bot(token=TOKEN)
 # Диспетчер
@@ -67,11 +67,20 @@ async def answer_schedule(message: types.Message):
                  f'firs_name: {message.from_user.first_name}|last_name: {message.from_user.last_name}]')
     await message.answer("Что бы вы хотели бы узнать?", reply_markup=keyboard)
 
+@dp.message(F.text.lower() == "дбп-101рив")
+async def answer_schedule(message: types.Message):
+    global GROUP
+    GROUP = "дбп-101рив"
+    logging.info(f'[id: {message.from_user.id}|username: {message.from_user.username}|'
+                 f'firs_name: {message.from_user.first_name}|last_name: {message.from_user.last_name}]')
+    await message.answer("Что бы вы хотели бы узнать?", reply_markup=keyboard)
 
 @dp.message(F.text.lower() == "дбо-102рпо")
 async def answer_schedule(message: types.Message):
     global GROUP
     GROUP = "дбо-102рпо"
+    logging.info(f'[id: {message.from_user.id}|username: {message.from_user.username}|'
+                 f'firs_name: {message.from_user.first_name}|last_name: {message.from_user.last_name}]')
     # print(GROUP)
     await message.answer("Что бы вы хотели бы узнать?", reply_markup=keyboard)
 
@@ -80,20 +89,24 @@ async def answer_schedule(message: types.Message):
     await message.answer("На какой день вы хотели бы узнать расписание: ", reply_markup=keyboard1)
 
 
-# @dp.message(F.text.lower() == "создатели бота")
-# async def answer_creators(message: types.Message):
-#     await message.reply(CREATORS)
-
 @dp.message(F.text.lower() == "📆расписание на сегодняшний день")
 async def answer_day_schedule(message: types.Message):
-    await message.answer("Вот ваше расписание:", reply_markup=keyboard)
     # print(GROUP)
-    await message.answer(get_day_schedule(GROUP))
+    s = get_day_schedule(GROUP)
+    if s == '':
+        await message.answer("Сегодняшние пары уже закончились")
+    else:
+        await message.answer("Вот ваше расписание:", reply_markup=keyboard)
+        await message.answer(s)
+
 
 @dp.message(F.text.lower() == "📆расписание на неделю")
 async def answer_day_schedule(message: types.Message):
-    await message.answer("Вот ваше расписание:", reply_markup=keyboard)
-    await message.answer(get_week_schedule(GROUP))
+    if get_week_schedule(GROUP) == '~~~~~~~~~~~~~~~~~~~~~~~~~\n':
+        await message.answer("На этой неделе у вас нет пар;))")
+    else:
+        await message.answer("Вот ваше расписание:", reply_markup=keyboard)
+        await message.answer(get_week_schedule(GROUP))
 
 @dp.message()
 async def echo(message: types.Message):
@@ -101,6 +114,7 @@ async def echo(message: types.Message):
 
 # Запуск процесса поллинга новых апдейтов
 async def main():
+    await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
 
 if __name__ == "__main__":

@@ -3,19 +3,15 @@ import pandas
 
 import json
 from scripts.gtime import get_date, get_day
-
-groups = {"дбо-101рпо": 'd101.xlsx', 'дбо-102рпо': "d102.xlsx", "дбо-161рпо": "d161.xlsx"}
+from scripts.gtime import h, mi
+groups = {"дбо-101рпо": 'dbo101.xlsx', 'дбо-102рпо': "dbo102.xlsx", "дбо-161рпо": "dbo101.xlsx", "дбп-101рив": 'dbp101.xlsx'}
 
 
 
 def d(group):
-    # for el in os.listdir():
-    #     if groups[group] != el:
-    #         continue
     group = groups[group]
     path= os.getcwd()
     excel_data_df = pandas.read_excel(path + f"/data/{group}")
-    # excel_data_df = pandas.read_excel(el)
     json_str = excel_data_df.to_json(orient='records', force_ascii=False)
     student_details = json.loads(json_str)
     c = 0
@@ -44,17 +40,25 @@ def get_day_schedule(group) -> str:
     if _d == None:
         s = "Сегодня у вас нет пар;)"
         return s
-
-
-
     for _val in _d[1:]:
         time = _val["Время"]
         lession = _val["Курс"]
         classroom = _val["Место проведения"]
-        Teacher = _val["Преподаватель"]
-
-        s += ("Время: " + time + '\n' + "Предмет: " + lession + '\n'
-              + "Кабинет: " + '\n' + classroom + '\n' + 'Преподаватель: ' + Teacher + '\n\n')
+        teacher = _val["Преподаватель"]
+        n_time = h + mi
+        if len(time.split(' - ')) == 2:
+            _time = time.split(' - ')[1]
+            _h = _time.split(':')[0]
+            _m = _time.split(':')[1]
+            r_time = _h + _m
+            if int(n_time) > int(r_time):
+                continue
+        else:
+            r_time = int(time)
+            if int(r_time) < int(n_time):
+                continue
+            s += ("Время: " + time + '\n' + "Предмет: " + lession + '\n'
+                  + "Кабинет: " + '\n' + classroom + '\n' + 'Преподаватель: ' + teacher + '\n\n')
     return s
 
 def get_week_schedule(group) -> str:
@@ -90,7 +94,6 @@ def get_week_schedule(group) -> str:
 
 
 
-# print(get_day_schedule("дбо-101рпо"))
 
 
 
