@@ -6,12 +6,14 @@ m = now.month
 d = now.day
 h = now.hour
 mi = now.minute
+
 s = now.second
 ms = now.microsecond
 
 def get_day() -> str:
     datetime.datetime(y, m, d, h, mi, s, ms)
     return datetime.datetime.isoweekday(now)
+
     # if language == 'ru':
     #     time_ru = {1: 'Понедельник', 2: 'Вторник', 3: "Среда", 4: "Четверг", 5: "Пятница", 6: "Суббота",
     #                7: "Воскресенье"}

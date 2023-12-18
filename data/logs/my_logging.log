@@ -1,120 +1,19 @@
-INFO (16/12/2023 10:09:41): Start polling (Line: 527) [dispatcher.py]
-INFO (16/12/2023 10:09:42): Run polling for bot @SYNERGY_FP_bot id=6917266396 - '{<}Bot' (Line: 341) [dispatcher.py]
-ERROR (16/12/2023 10:09:46): Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (Line: 219) [dispatcher.py]
-WARNING (16/12/2023 10:09:46): Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6917266396) (Line: 221) [dispatcher.py]
-ERROR (16/12/2023 10:09:52): Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (Line: 219) [dispatcher.py]
-WARNING (16/12/2023 10:09:52): Sleep for 1.400345 seconds and try again... (tryings = 1, bot id = 6917266396) (Line: 221) [dispatcher.py]
-ERROR (16/12/2023 10:09:59): Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (Line: 219) [dispatcher.py]
-WARNING (16/12/2023 10:09:59): Sleep for 1.722769 seconds and try again... (tryings = 2, bot id = 6917266396) (Line: 221) [dispatcher.py]
-ERROR (16/12/2023 10:10:07): Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (Line: 219) [dispatcher.py]
-WARNING (16/12/2023 10:10:07): Sleep for 2.330873 seconds and try again... (tryings = 3, bot id = 6917266396) (Line: 221) [dispatcher.py]
-ERROR (16/12/2023 10:10:13): Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (Line: 219) [dispatcher.py]
-WARNING (16/12/2023 10:10:13): Sleep for 2.999094 seconds and try again... (tryings = 4, bot id = 6917266396) (Line: 221) [dispatcher.py]
-ERROR (16/12/2023 10:10:21): Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (Line: 219) [dispatcher.py]
-WARNING (16/12/2023 10:10:21): Sleep for 3.952961 seconds and try again... (tryings = 5, bot id = 6917266396) (Line: 221) [dispatcher.py]
-ERROR (16/12/2023 10:10:29): Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (Line: 219) [dispatcher.py]
-WARNING (16/12/2023 10:10:29): Sleep for 4.882063 seconds and try again... (tryings = 6, bot id = 6917266396) (Line: 221) [dispatcher.py]
-ERROR (16/12/2023 10:10:39): Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (Line: 219) [dispatcher.py]
-WARNING (16/12/2023 10:10:39): Sleep for 4.869944 seconds and try again... (tryings = 7, bot id = 6917266396) (Line: 221) [dispatcher.py]
-INFO (16/12/2023 10:10:46): Connection established (tryings = 8, bot id = 6917266396) (Line: 233) [dispatcher.py]
-INFO (16/12/2023 10:10:46): [id: 1062825038|username: I_D_DQD|firs_name: IDDQD|last_name: None] (Line: 74) [bot.py]
-INFO (16/12/2023 10:10:47): Update id=110305795 is handled. Duration 803 ms by bot id=6917266396 (Line: 172) [dispatcher.py]
-ERROR (16/12/2023 10:10:49): Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (Line: 219) [dispatcher.py]
-WARNING (16/12/2023 10:10:49): Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6917266396) (Line: 221) [dispatcher.py]
-WARNING (16/12/2023 10:10:55): Received SIGINT signal (Line: 455) [dispatcher.py]
-INFO (16/12/2023 10:10:55): Polling stopped for bot @SYNERGY_FP_bot id=6917266396 - '{<}Bot' (Line: 359) [dispatcher.py]
-INFO (16/12/2023 10:10:55): Polling stopped (Line: 554) [dispatcher.py]
-ake sure that only one bot instance is running (Line: 219) [dispatcher.py]
-WARNING (16/12/2023 10:10:50): Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6917266396) (Line: 221) [dispatcher.py]
-INFO (16/12/2023 10:10:50): Update id=110305797 is not handled. Duration 410 ms by bot id=6917266396 (Line: 172) [dispatcher.py]
-ERROR (16/12/2023 10:10:50): Cause exception while process update id=110305797 by bot id=6917266396
-FileNotFoundError: [Errno 2] No such file or directory: '/home/nickname/edu_2/data/d101.xlsx' (Line: 315) [dispatcher.py]
-Traceback (most recent call last):
-  File "/home/nickname/edu/.venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
-    response = await self.feed_update(bot, update, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/nickname/edu/.venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
-    response = await self.update.wrap_outer_middleware(
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/nickname/edu/.venv/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
-    return await handler(event, data)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/nickname/edu/.venv/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
-    return await handler(event, data)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/nickname/edu/.venv/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
-    return await handler(event, data)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/nickname/edu/.venv/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
-    return await wrapped_inner(event, kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/nickname/edu/.venv/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
-    return await wrapped()
-           ^^^^^^^^^^^^^^^
-  File "/home/nickname/edu/.venv/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
-    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/nickname/edu/.venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
-    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/nickname/edu/.venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
-    return await self._propagate_event(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/nickname/edu/.venv/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 136, in _propagate_event
-    response = await observer.trigger(event, **kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/nickname/edu/.venv/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
-    return await wrapped_inner(event, kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/nickname/edu/.venv/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
-    return await wrapped()
-           ^^^^^^^^^^^^^^^
-  File "/home/nickname/edu_2/main.py", line 91, in answer_day_schedule
-  File "/home/nickname/edu_2/data/main_data.py", line 41, in get_day_schedule
-    s = "Сегодня у вас нет пар;)"
-            ^^^^
-  File "/home/nickname/edu_2/data/main_data.py", line 17, in d
-    c = 0
-          
-  File "/home/nickname/edu/.venv/lib/python3.11/site-packages/pandas/io/excel/_base.py", line 504, in read_excel
-    io = ExcelFile(
-         ^^^^^^^^^^
-  File "/home/nickname/edu/.venv/lib/python3.11/site-packages/pandas/io/excel/_base.py", line 1563, in __init__
-    ext = inspect_excel_format(
-          ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/nickname/edu/.venv/lib/python3.11/site-packages/pandas/io/excel/_base.py", line 1419, in inspect_excel_format
-    with get_handle(
-         ^^^^^^^^^^^
-  File "/home/nickname/edu/.venv/lib/python3.11/site-packages/pandas/io/common.py", line 872, in get_handle
-    handle = open(handle, ioargs.mode)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: '/home/nickname/edu_2/data/d101.xlsx'
-INFO (16/12/2023 10:11:01): Connection established (tryings = 1, bot id = 6917266396) (Line: 233) [dispatcher.py]
-ERROR (16/12/2023 10:12:04): Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (Line: 219) [dispatcher.py]
-WARNING (16/12/2023 10:12:04): Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6917266396) (Line: 221) [dispatcher.py]
-INFO (16/12/2023 10:12:07): Connection established (tryings = 1, bot id = 6917266396) (Line: 233) [dispatcher.py]
-INFO (16/12/2023 10:12:08): Update id=110305798 is handled. Duration 1026 ms by bot id=6917266396 (Line: 172) [dispatcher.py]
-ERROR (16/12/2023 10:12:10): Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (Line: 219) [dispatcher.py]
-WARNING (16/12/2023 10:12:10): Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6917266396) (Line: 221) [dispatcher.py]
-INFO (16/12/2023 10:12:16): Connection established (tryings = 1, bot id = 6917266396) (Line: 233) [dispatcher.py]
-ERROR (16/12/2023 10:12:16): Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (Line: 219) [dispatcher.py]
-WARNING (16/12/2023 10:12:16): Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6917266396) (Line: 221) [dispatcher.py]
-INFO (16/12/2023 10:12:16): Update id=110305799 is handled. Duration 207 ms by bot id=6917266396 (Line: 172) [dispatcher.py]
-INFO (16/12/2023 10:12:27): Connection established (tryings = 1, bot id = 6917266396) (Line: 233) [dispatcher.py]
-ERROR (16/12/2023 10:12:29): Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (Line: 219) [dispatcher.py]
-WARNING (16/12/2023 10:12:29): Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6917266396) (Line: 221) [dispatcher.py]
-INFO (16/12/2023 10:12:34): Connection established (tryings = 1, bot id = 6917266396) (Line: 233) [dispatcher.py]
-ERROR (16/12/2023 10:12:35): Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (Line: 219) [dispatcher.py]
-WARNING (16/12/2023 10:12:35): Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6917266396) (Line: 221) [dispatcher.py]
-INFO (16/12/2023 10:12:35): Update id=110305800 is handled. Duration 819 ms by bot id=6917266396 (Line: 172) [dispatcher.py]
-INFO (16/12/2023 10:12:46): Connection established (tryings = 1, bot id = 6917266396) (Line: 233) [dispatcher.py]
-ERROR (16/12/2023 10:13:42): Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (Line: 219) [dispatcher.py]
-WARNING (16/12/2023 10:13:42): Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6917266396) (Line: 221) [dispatcher.py]
-INFO (16/12/2023 10:13:44): Connection established (tryings = 1, bot id = 6917266396) (Line: 233) [dispatcher.py]
-INFO (16/12/2023 10:13:45): Update id=110305801 is handled. Duration 920 ms by bot id=6917266396 (Line: 172) [dispatcher.py]
-ERROR (16/12/2023 10:13:48): Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (Line: 219) [dispatcher.py]
-WARNING (16/12/2023 10:13:48): Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6917266396) (Line: 221) [dispatcher.py]
-INFO (16/12/2023 10:13:59): Connection established (tryings = 1, bot id = 6917266396) (Line: 233) [dispatcher.py]
-ERROR (16/12/2023 10:14:14): Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (Line: 219) [dispatcher.py]
-WARNING (16/12/2023 10:14:14): Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6917266396) (Line: 221) [dispatcher.py]
-INFO (16/12/2023 10:14:25): Connection established (tryings = 1, bot id = 6917266396) (Line: 233) [dispatcher.py]
+INFO (18/12/2023 11:26:01): Start polling (Line: 527) [dispatcher.py]
+INFO (18/12/2023 11:26:01): Run polling for bot @Willcry_stickers_bot id=5291069732 - 'Willcry' (Line: 341) [dispatcher.py]
+INFO (18/12/2023 11:26:31): Update id=189664271 is handled. Duration 239 ms by bot id=5291069732 (Line: 172) [dispatcher.py]
+INFO (18/12/2023 11:26:41): [id: 5103386328|username: None|firs_name: ㅤ|last_name: None] (Line: 68) [bot.py]
+INFO (18/12/2023 11:26:41): Update id=189664272 is handled. Duration 73 ms by bot id=5291069732 (Line: 172) [dispatcher.py]
+INFO (18/12/2023 11:26:43): Update id=189664273 is handled. Duration 130 ms by bot id=5291069732 (Line: 172) [dispatcher.py]
+INFO (18/12/2023 11:26:44): Update id=189664274 is handled. Duration 455 ms by bot id=5291069732 (Line: 172) [dispatcher.py]
+INFO (18/12/2023 11:26:47): Update id=189664275 is handled. Duration 153 ms by bot id=5291069732 (Line: 172) [dispatcher.py]
+INFO (18/12/2023 11:26:47): Update id=189664276 is handled. Duration 191 ms by bot id=5291069732 (Line: 172) [dispatcher.py]
+INFO (18/12/2023 11:26:49): Update id=189664277 is handled. Duration 182 ms by bot id=5291069732 (Line: 172) [dispatcher.py]
+INFO (18/12/2023 11:26:50): Update id=189664278 is handled. Duration 346 ms by bot id=5291069732 (Line: 172) [dispatcher.py]
+INFO (18/12/2023 11:26:51): Update id=189664279 is handled. Duration 201 ms by bot id=5291069732 (Line: 172) [dispatcher.py]
+INFO (18/12/2023 11:26:52): Update id=189664280 is handled. Duration 178 ms by bot id=5291069732 (Line: 172) [dispatcher.py]
+INFO (18/12/2023 11:26:54): Update id=189664281 is handled. Duration 203 ms by bot id=5291069732 (Line: 172) [dispatcher.py]
+INFO (18/12/2023 11:26:56): Update id=189664282 is handled. Duration 78 ms by bot id=5291069732 (Line: 172) [dispatcher.py]
+INFO (18/12/2023 11:26:57): Update id=189664283 is handled. Duration 253 ms by bot id=5291069732 (Line: 172) [dispatcher.py]
+WARNING (18/12/2023 11:29:36): Received SIGINT signal (Line: 455) [dispatcher.py]
+INFO (18/12/2023 11:29:36): Polling stopped for bot @Willcry_stickers_bot id=5291069732 - 'Willcry' (Line: 359) [dispatcher.py]
+INFO (18/12/2023 11:29:36): Polling stopped (Line: 554) [dispatcher.py]
